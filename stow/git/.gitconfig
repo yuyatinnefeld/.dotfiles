@@ -1,0 +1,78 @@
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+	conflictStyle = diff3
+[mergetool]
+	keepBackup = false
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[pager]
+	branch = false
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+[user]
+	email = agilesteel@gmail.com
+	name = Vladyslav Pekker
+	signingKey = ~/.ssh/id_ed25519.pub
+[pull]
+	rebase = true
+	twohead = ort
+[rebase]
+	autosquash = true
+	abbreviateCommands = true
+[credential]
+	helper = cache --timeout 3600
+[rerere]
+	enabled = true
+[init]
+	defaultBranch = main
+[advice]
+	detachedHead = false
+[include]
+	path = ~/.local/.gitconfig
+[delta]
+	file-decoration-style = black ul
+	file-style = black
+	hunk-header-decoration-style = black box
+	hunk-header-line-number-style = black
+	line-numbers = true
+	line-numbers-left-format = {nm:>3}│
+	line-numbers-left-style = black
+	line-numbers-minus-style = black
+	line-numbers-plus-style = black
+	line-numbers-right-format = {np:>3}│
+	line-numbers-right-style = black
+	line-numbers-zero-style = black
+	minus-emph-style = red bold
+	minus-empty-line-marker-style = omit
+	minus-style = red
+	navigate = false
+	plus-emph-style = green bold
+	plus-empty-line-marker-style = omit
+	plus-style = green
+	side-by-side = false
+	syntax-theme = base16-ocean.dark
+	true-color = auto
+	zero-style = black
+[submodule]
+	recurse = true
+[maintenance]
+	repo = /Users/vlad/dev/github/devinsideyou/nixpkgs
+	repo = /Users/vlad/dev/github/formslogic/fl/1
+	repo = /Users/vlad/dev/github/formslogic/fl/2
+	repo = /Users/vlad/dev/github/formslogic/fl/3
+	repo = /Users/vlad/dev/github/formslogic/fl/4
+	repo = /Users/vlad/dev/github/formslogic/fl/5
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed-signers
+[tag]
+	gpgSign = true
